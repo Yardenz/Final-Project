@@ -29,10 +29,16 @@ map.on('load', function() {             // 'load' event handler
 
 })
 
-let buildings = ["Gateway plaza", "Gateway Outline", "Olympic Village: Fort Douglas"]
+    // below this is imagery for the 2002 map//
+let buildings = ["Gateway plaza", "Gateway Outline", "Olympic Village: Fort Douglas", "Arena", "Salt Palace", "Medals Plaza", "Rice Eccles Stadium"]
 
-let content = { "Gateway plaza": "this is some HTML<br /><img src='images/skier-big-mountain.jpg' width='100' height='100' /><br /><img src='https://www.telegraph.co.uk/content/dam/Travel/ski/skier-big-mountain.jpg' width='100' height='100' />",
-                "Gateway Outline": "more HTML",
+let content = { "Gateway plaza": "A water-flake shaped fountain was named as the Olympic Plaza. <br /><img src='images/2002/gateway.png' width='450' height='350' <br />",
+                "Gateway Outline": "Identifed as a site for redevelopment by the city government the Gateway was developed by The Boyer Co. a private developer for $375 million. Both as a strategy for urban renewal of a formerly industrial area and as a strategy for business to invest in downtown prior to the Olympics. <br /><img src='images/Pie Charts/Gateway.png' width='400' height='400' />",
+                "Olympic Village: Fort Douglas": "more HTML",
+                "Arena": "more HTML",
+                "Salt Palace": "more HTML",
+                "Medals Plaza": "more HTML",
+                "Rice Eccles Stadium": "more HTML",
 
                 }
 
