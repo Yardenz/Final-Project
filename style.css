@@ -12,5 +12,5 @@ body, html {
 }
 
 .mapboxgl-popup-content {
-	width: 400px;
+	max-width: 400px;
 }
