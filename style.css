@@ -11,3 +11,9 @@ body, html {
     width: 100%;
 }
 
+<<<<<<< HEAD
+=======
+.mapboxgl-popup-content {
+	max-width: 400px;
+}
+>>>>>>> 60ae881f7750c6fd45e213ccfba2cbd8103c42fe
