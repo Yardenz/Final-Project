@@ -10,3 +10,7 @@ body, html {
     bottom: 0;
     width: 100%;
 }
+
+.mapboxgl-popup-content {
+	width: 400px;
+}
