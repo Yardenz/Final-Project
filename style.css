@@ -6,9 +6,22 @@ body, html {
 
 #map {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+    top: 100px;
+    left: 100px;
+    /*bottom: 100px;*/
+    /*width: 100%;*/
+    width: 800px;
+    height: 500px;
+}
+
+#description {
+  position: absolute;
+  top: 100px;
+  left: 1000px;
+  /*background-color: blue;*/
+  width: 300px;
+  height: 500px;
+  font: 12px/20px 'Helvetic Neue', Arial, Helvetica, sans-serif;  
 }
 
 .marker {
@@ -19,9 +32,10 @@ body, html {
   border-radius: 30%;
   cursor: pointer;
 }
-<<<<<<< HEAD
-=======
+
 .mapboxgl-popup-content {
-	max-width: 400px;
+    max-width: 500px;
+    max-height: 200px;
+    overflow: scroll;
+    font: 12px/20px 'Helvetic Neue', Arial, Helvetica, sans-serif;  
 }
->>>>>>> 60ae881f7750c6fd45e213ccfba2cbd8103c42fe
