@@ -3,15 +3,111 @@
 console.log('Loaded map.js')
 
 mapboxgl.accessToken = 'pk.eyJ1IjoieWFyZGVueiIsImEiOiJjam5hejlmMGkwMWV6M3BsOWJxcHNhZDJpIn0.yUUMMk4ixslNceyxLrAwzg';
-const map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/yardenz/cjp1b65uf10z22sntfg71uhxv',
-center: [-111.860474, 40.760394],
-zoom: 12.5
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/yardenz/cjp1b65uf10z22sntfg71uhxv',
+  center: [-111.860474, 40.760394],
+  zoom: 12.5
 });
 
+var geojson = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-111.84784250574066, 40.76081427914224]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'venue'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-111.82938498915924, 40.767940013487504]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'venue'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-111.8956617923561, 40.76925318507409]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'venue'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-111.89686156910057, 40.7714713123857]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'venue'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-111.90070791219831, 40.76895921083829]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'venue'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-111.90547173162831, 40.770375620198365]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'venue'
+    }
+  }]
+};
+
+geojson.features.forEach(function(marker) {
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+  .setLngLat(marker.geometry.coordinates)
+  .addTo(map);
+});
+// const map = new mapboxgl.Map({
+// container: 'map',
+// style: 'mapbox://styles/yardenz/cjp1b65uf10z22sntfg71uhxv',
+// center: [-111.860474, 40.760394],
+// zoom: 12.5
+// });
 
 // console.log(map)
+let current_location = [-73.96216, 40.80779]
+
+// update the variable whenever a geolocation event fires
+
+// for testing purposes, also update the variable whenever you click on the map
+map.on('click', function(event) {
+    current_location = [event.lngLat.lng, event.lngLat.lat]
+    console.log('clicked', current_location)        
+})
 
 map.on('load', function() {             // 'load' event handler
 
