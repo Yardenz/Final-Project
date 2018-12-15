@@ -16,13 +16,14 @@ body, html {
 
 #description {
   position: absolute;
-  top: 0px;
+  top: 10px;
   left: 910px;
   background-color: #e9f5ff;
   width: 400px;
   height: 100%;
   overflow: scroll;
-  font: 12px/20px 'Helvetic Neue', Arial, Helvetica, sans-serif;  
+  font: 12px/20px 'Helvetic Neue', Arial, Helvetica, sans-serif; 
+  text-align: absolute; 
 }
 
 .marker {
